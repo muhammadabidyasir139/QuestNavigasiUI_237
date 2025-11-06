@@ -91,5 +91,18 @@ fun DaftarPeserta(
                 thickness = 1.dp,
                 color = Color.Gray
             )
+            // ALAMAT
+            Text(
+                text = stringResource(id = R.string.label_alamat),
+                fontSize = 14.sp,
+                color = Color.Gray,
+                modifier = Modifier.padding(top = 10.dp)
+            )
+            Text(
+                text = stringResource(id = R.string.alamat_contoh),
+                fontSize = 18.sp,
+                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 20.dp)
+            )
 
         }
