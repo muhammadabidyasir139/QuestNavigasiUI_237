@@ -1,8 +1,8 @@
-//package com.example.navigationapp.view
+package com.example.navigationapp.view
 
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.navigationapp.view
+//package com.example.navigationapp.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.*
