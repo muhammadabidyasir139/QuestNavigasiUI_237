@@ -1,5 +1,6 @@
 package com.example.navigationapp
 
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 
 enum class Navigasi {
@@ -8,3 +9,13 @@ enum class Navigasi {
 }
 
 @Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController(),
+    modifier: Modifier
+) {
+    Scaffold { isiRuang->
+        NavHost(
+            navController = navController,
+        )
+    }
+}
