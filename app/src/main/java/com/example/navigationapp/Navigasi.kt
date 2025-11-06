@@ -1,8 +1,15 @@
 package com.example.navigationapp
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.compose.composable
+import com.example.navigationapp.view.FormIsian
+import com.example.navigationapp.view.TampilData
 
 enum class Navigasi {
     Formulir,
@@ -23,14 +30,14 @@ fun DataApp(
         ){
             composable(route = Navigasi.Formulir.name){
                 FormIsian (
-                    OnSubmitBtnClick = {
+                    onSubmitBtnClick = {
                         navController.navigate(route = Navigasi.Detail.name)
                     }
                 )
             }
             composable(route = Navigasi.Detail.name) {
                 TampilData(
-                    onBackClick = {cancelAndBackToFormulir(navController)}
+                    onBackBtnClick = {cancelAndBackToFormulir(navController)}
                 )
             }
         }
