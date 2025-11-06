@@ -114,6 +114,18 @@ fun DaftarPeserta(
                     .fillMaxWidth()
                     .padding(horizontal = 20.dp)
                     .padding(bottom = 10.dp)
-            )
+            ) {
+                Text(text = stringResource(id = R.string.btn_beranda))
+            }
+
+            // Tombol Formulir Pendaftaran
+            Button(
+                onClick = onGoToForm,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp)
+            ) {
+                Text(text = stringResource(id = R.string.btn_formulir_pendaftaran))
+            }
 
         }
