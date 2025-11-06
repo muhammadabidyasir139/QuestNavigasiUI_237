@@ -8,4 +8,7 @@
     <string name="tampil">TTampilan Data</string>
     <string name="home">Form Isian</string>
     <string name="nama">Muhammad Abid Yasir</string>
+    <string name="jenis_kelamin_contoh">Laki-Laki</string>
+    <string name="status_perkawinan_contoh">Belum Menikah</string>
+    <string name="alamat_contoh">Yogyakarta</string>
 </resources>

@@ -6,12 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.navigationapp.R
 
 @Composable
 fun Beranda(
@@ -61,7 +59,7 @@ fun Beranda(
             )
 
             Text(
-                text = "Pascal Pahlevi Pasha",
+                text = "Muhammad Abid Yasir",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
                 color = Color(0xFF5D3FD3),
@@ -69,7 +67,7 @@ fun Beranda(
                 modifier = Modifier.padding(bottom = 4.dp)
             )
             Text(
-                text = "20250140091",
+                text = "20230140237",
                 fontSize = 16.sp,
                 color = Color(0xFF5D3FD3),
                 textAlign = TextAlign.Center,
