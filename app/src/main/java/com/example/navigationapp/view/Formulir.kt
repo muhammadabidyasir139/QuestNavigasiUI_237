@@ -16,10 +16,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.navigationapp.R
+import com.example.layoutcompose.R
+//import com.example.navigationapp.R
 
 @Composable
 fun FormIsian(
+    modifier: Modifier = Modifier,
     jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
     onSubmitBtnClick: () -> Unit
 ) {
@@ -96,7 +98,7 @@ fun FormIsian(
             // Tombol Submit
             Button(
                 modifier = Modifier.fillMaxWidth(),
-                onClick = onSubmitBtnClick  // ✅ Sudah lowercase
+                onClick = onSubmitBtnClick
             ) {
                 Text(text = stringResource(id = R.string.submit))
             }

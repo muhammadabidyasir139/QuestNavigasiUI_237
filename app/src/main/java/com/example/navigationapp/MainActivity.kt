@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.navigationapp.ui.theme.NavigationAppTheme
+import com.example.navigationapp.view.FormIsian
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             NavigationAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    FormIsian(
+                        onSubmitBtnClick = {
+
+                        },
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
