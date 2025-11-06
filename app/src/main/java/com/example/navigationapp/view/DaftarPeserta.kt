@@ -105,4 +105,15 @@ fun DaftarPeserta(
                 modifier = Modifier.padding(bottom = 20.dp)
             )
 
+            Spacer(modifier = Modifier.height(10.dp))
+
+            // Tombol Beranda
+            Button(
+                onClick = onBackToHome,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp)
+                    .padding(bottom = 10.dp)
+            )
+
         }
