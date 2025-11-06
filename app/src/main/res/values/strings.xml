@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">layoutcompose</string>
-    <string name="submit">Submin</string>
+    <string name="submit">Submit</string>
     <string name="back">Back</string>
     <string name="nama_lengkap">NAMA LENGKAP</string>
     <string name="jenis_kelamin">JENIS KELAMIN</string>
     <string name="alamat">ALAMAT</string>
-    <string name="tampil">TTampilan Data</string>
+    <string name="tampil">Tampilan Data</string>
     <string name="home">Form Isian</string>
     <string name="nama">Muhammad Abid Yasir</string>
     <string name="jenis_kelamin_contoh">Laki-Laki</string>
@@ -13,5 +14,9 @@
     <string name="alamat_contoh">Yogyakarta</string>
     <string name="btn_beranda">Beranda</string>
     <string name="btn_formulir_pendaftaran">Formulir Pendaftaran</string>
-    <string name="label_kelamin_contoh">Jenis Kelamin</string>
+    <string name="title_list_peserta">List Daftar Peserta</string>
+    <string name="label_nama_lengkap">NAMA LENGKAP</string>
+    <string name="label_jenis_kelamin">JENIS KELAMIN</string>
+    <string name="label_status_perkawinan">STATUS PERKAWINAN</string>
+    <string name="label_alamat">ALAMAT</string>
 </resources>

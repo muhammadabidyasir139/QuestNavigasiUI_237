@@ -3,48 +3,50 @@ package com.example.navigationapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.navigationapp.ui.theme.NavigationAppTheme
-import com.example.navigationapp.view.FormIsian
+import com.example.navigationapp.view.Beranda
+import com.example.navigationapp.view.DaftarPeserta
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             NavigationAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FormIsian(
-                        onSubmitBtnClick = {
+                var currentPage by remember { mutableStateOf("beranda") }
 
-                        },
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Scaffold(
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
+                    when (currentPage) {
+                        "beranda" -> {
+                            Beranda(
+                                onSubmitClick = {
+                                    currentPage = "daftar_peserta"
+                                },
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+                        "daftar_peserta" -> {
+                            DaftarPeserta(
+                                onBackToHome = {
+                                    currentPage = "beranda"
+                                },
+                                onGoToForm = {
+                                    // Misal: currentPage = "form"
+                                }
+                            )
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NavigationAppTheme {
-        Greeting("Android")
     }
 }

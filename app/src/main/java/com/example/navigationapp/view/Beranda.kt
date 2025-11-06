@@ -13,10 +13,11 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Beranda(
+    modifier: Modifier = Modifier,
     onSubmitClick: () -> Unit
 ) {
     Scaffold(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier,
         containerColor = Color(0xFFE6E6FA)
     ) { paddingValues ->
         Column(
