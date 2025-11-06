@@ -49,4 +49,25 @@ fun DaftarPeserta(
                 thickness = 1.dp,
                 color = Color.Gray
             )
+            // JENIS KELAMIN
+            Text(
+                text = stringResource(id = R.string.label_jenis_kelamin),
+                fontSize = 14.sp,
+                color = Color.Gray,
+                modifier = Modifier.padding(top = 10.dp)
+            )
+            Text(
+                text = stringResource(id = R.string.jenis_kelamin_contoh),
+                fontSize = 18.sp,
+                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 10.dp)
+            )
+
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(horizontal = 20.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Gray
+            )
     }
