@@ -1,8 +1,6 @@
-package com.example.navigationapp.view
-
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-//package com.example.navigationapp.view
+package com.example.navigationapp.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.*
@@ -23,7 +21,7 @@ import com.example.navigationapp.R
 @Composable
 fun FormIsian(
     jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
-    OnSubmitBtnClick: () -> Unit
+    onSubmitBtnClick: () -> Unit
 ) {
     Scaffold(
         modifier = Modifier,
@@ -98,7 +96,7 @@ fun FormIsian(
             // Tombol Submit
             Button(
                 modifier = Modifier.fillMaxWidth(),
-                onClick = OnSubmitBtnClick
+                onClick = onSubmitBtnClick  // ✅ Sudah lowercase
             ) {
                 Text(text = stringResource(id = R.string.submit))
             }
