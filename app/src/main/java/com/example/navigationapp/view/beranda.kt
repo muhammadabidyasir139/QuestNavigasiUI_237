@@ -1,0 +1,64 @@
+package com.example.navigationapp.view
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.navigationapp.R
+
+@Composable
+fun Beranda(
+    onSubmitClick: () -> Unit
+) {
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = Color(0xFFE6E6FA)
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(20.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Selamat Datang",
+                fontSize = 28.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF5D3FD3), // Ungu tua
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = 30.dp)
+            )
+
+
+            Text(
+                text = "CARD-LST",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF5D3FD3),
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+            Text(
+                text = "MOBILE APP",
+                fontSize = 14.sp,
+                color = Color(0xFF5D3FD3),
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+            Text(
+                text = "2025",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF5D3FD3),
+                modifier = Modifier.padding(bottom = 30.dp)
+            )
+
+
+}

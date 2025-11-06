@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.layoutcompose.R
+import com.example.navigationapp.R
 //import com.example.navigationapp.R
 
 @Composable
