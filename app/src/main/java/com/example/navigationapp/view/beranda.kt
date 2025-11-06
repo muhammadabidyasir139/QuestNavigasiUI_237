@@ -60,5 +60,38 @@ fun Beranda(
                 modifier = Modifier.padding(bottom = 30.dp)
             )
 
+            Text(
+                text = "Pascal Pahlevi Pasha",
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFF5D3FD3),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+            Text(
+                text = "20250140091",
+                fontSize = 16.sp,
+                color = Color(0xFF5D3FD3),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = 30.dp)
+            )
+
+
+            Button(
+                onClick = onSubmitClick,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF5D3FD3), // Ungu tua
+                    contentColor = Color.White
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp)
+                    .padding(horizontal = 40.dp)
+            ) {
+                Text(text = "Submit", fontSize = 16.sp)
+            }
+        }
+    }
+
 
 }
