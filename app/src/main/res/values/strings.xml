@@ -11,4 +11,6 @@
     <string name="jenis_kelamin_contoh">Laki-Laki</string>
     <string name="status_perkawinan_contoh">Belum Menikah</string>
     <string name="alamat_contoh">Yogyakarta</string>
+    <string name="btn_beranda">Beranda</string>
+    <string name="btn_formulir_pendaftaran">Formulir Pendaftaran</string>
 </resources>
