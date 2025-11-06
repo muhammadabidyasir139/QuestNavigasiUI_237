@@ -23,6 +23,7 @@ fun DaftarPeserta(
 ) {
     Scaffold(
         modifier = modifier,
+        containerColor = Color(0xFFE6E6FA), // Latar ungu muda
         topBar = {
             TopAppBar(
                 title = {
@@ -33,117 +34,164 @@ fun DaftarPeserta(
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colorResource(id = R.color.teal_700)
+                    containerColor = Color(0xFF9C27B0) // Ungu tua header
                 )
             )
         }
     ) { isiRuang ->
         Column(
-            modifier = Modifier.padding(isiRuang),
+            modifier = Modifier
+                .padding(isiRuang)
+                .padding(20.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // NAMA LENGKAP
-            Text(
-                text = stringResource(id = R.string.label_nama_lengkap),
-                fontSize = 14.sp,
-                color = Color.Gray,
-                modifier = Modifier.padding(top = 20.dp)
-            )
-            Text(
-                text = stringResource(id = R.string.nama),
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 10.dp)
-            )
-
-            HorizontalDivider(
+            Card(
                 modifier = Modifier
-                    .padding(horizontal = 20.dp)
-                    .width(250.dp),
-                thickness = 1.dp,
-                color = Color.Gray
-            )
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.White
+                ),
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.label_nama_lengkap),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Gray
+                    )
+                    Text(
+                        text = stringResource(id = R.string.nama),
+                        fontSize = 16.sp,
+                        color = Color.Black
+                    )
+                }
+            }
 
             // JENIS KELAMIN
-            Text(
-                text = stringResource(id = R.string.label_jenis_kelamin),
-                fontSize = 14.sp,
-                color = Color.Gray,
-                modifier = Modifier.padding(top = 10.dp)
-            )
-            Text(
-                text = stringResource(id = R.string.jenis_kelamin_contoh),
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 10.dp)
-            )
-
-            HorizontalDivider(
+            Card(
                 modifier = Modifier
-                    .padding(horizontal = 20.dp)
-                    .width(250.dp),
-                thickness = 1.dp,
-                color = Color.Gray
-            )
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.White
+                ),
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.label_jenis_kelamin),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Gray
+                    )
+                    Text(
+                        text = stringResource(id = R.string.jenis_kelamin_contoh),
+                        fontSize = 16.sp,
+                        color = Color.Black
+                    )
+                }
+            }
 
             // STATUS PERKAWINAN
-            Text(
-                text = stringResource(id = R.string.label_status_perkawinan),
-                fontSize = 14.sp,
-                color = Color.Gray,
-                modifier = Modifier.padding(top = 10.dp)
-            )
-            Text(
-                text = stringResource(id = R.string.status_perkawinan_contoh),
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 10.dp)
-            )
-
-            HorizontalDivider(
+            Card(
                 modifier = Modifier
-                    .padding(horizontal = 20.dp)
-                    .width(250.dp),
-                thickness = 1.dp,
-                color = Color.Gray
-            )
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.White
+                ),
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.label_status_perkawinan),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Gray
+                    )
+                    Text(
+                        text = stringResource(id = R.string.status_perkawinan_contoh),
+                        fontSize = 16.sp,
+                        color = Color.Black
+                    )
+                }
+            }
 
             // ALAMAT
-            Text(
-                text = stringResource(id = R.string.label_alamat),
-                fontSize = 14.sp,
-                color = Color.Gray,
-                modifier = Modifier.padding(top = 10.dp)
-            )
-            Text(
-                text = stringResource(id = R.string.alamat_contoh),
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 20.dp)
-            )
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.White
+                ),
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.label_alamat),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Gray
+                    )
+                    Text(
+                        text = stringResource(id = R.string.alamat_contoh),
+                        fontSize = 16.sp,
+                        color = Color.Black
+                    )
+                }
+            }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
             // Tombol Beranda
             Button(
                 onClick = onBackToHome,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF9C27B0), // Ungu tua
+                    contentColor = Color.White
+                ),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(50.dp)
                     .padding(horizontal = 20.dp)
-                    .padding(bottom = 10.dp)
             ) {
-                Text(text = stringResource(id = R.string.btn_beranda))
+                Text(
+                    text = stringResource(id = R.string.btn_beranda),
+                    fontSize = 16.sp
+                )
             }
+
+            Spacer(modifier = Modifier.height(8.dp))
 
             // Tombol Formulir Pendaftaran
             Button(
                 onClick = onGoToForm,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFFBA68C8), // Ungu muda
+                    contentColor = Color.White
+                ),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(50.dp)
                     .padding(horizontal = 20.dp)
             ) {
-                Text(text = stringResource(id = R.string.btn_formulir_pendaftaran))
+                Text(
+                    text = stringResource(id = R.string.btn_formulir_pendaftaran),
+                    fontSize = 16.sp
+                )
             }
         }
     }

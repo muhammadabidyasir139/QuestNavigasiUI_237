@@ -39,8 +39,10 @@ class MainActivity : ComponentActivity() {
                                 onBackToHome = {
                                     currentPage = "beranda"
                                 },
+
                                 onGoToForm = {
                                     // Misal: currentPage = "form"
+                                    currentPage = "form"
                                 }
                             )
                         }
