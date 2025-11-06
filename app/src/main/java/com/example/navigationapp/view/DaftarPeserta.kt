@@ -14,7 +14,7 @@ import com.example.navigationapp.R
 
 @Composable
 fun DaftarPeserta(
-    modifier : Modifier = Modifier,
+    modifier: Modifier = Modifier,
     onBackToHome: () -> Unit,
     onGoToForm: () -> Unit
 ) {
@@ -32,9 +32,8 @@ fun DaftarPeserta(
                     containerColor = colorResource(id = R.color.teal_700)
                 )
             )
-}
-    ) {
-            isiRuang ->
+        }
+    ) { isiRuang ->
         Column(
             modifier = Modifier.padding(isiRuang),
             verticalArrangement = Arrangement.Top,
@@ -48,9 +47,9 @@ fun DaftarPeserta(
                 modifier = Modifier.padding(top = 20.dp)
             )
             Text(
-                text = stringResource(id = R.string.nama_lengkap_contoh),
+                text = stringResource(id = R.string.nama),
                 fontSize = 18.sp,
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 10.dp)
             )
 
@@ -61,6 +60,7 @@ fun DaftarPeserta(
                 thickness = 1.dp,
                 color = Color.Gray
             )
+
             // JENIS KELAMIN
             Text(
                 text = stringResource(id = R.string.label_jenis_kelamin),
@@ -71,7 +71,7 @@ fun DaftarPeserta(
             Text(
                 text = stringResource(id = R.string.jenis_kelamin_contoh),
                 fontSize = 18.sp,
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 10.dp)
             )
 
@@ -82,6 +82,7 @@ fun DaftarPeserta(
                 thickness = 1.dp,
                 color = Color.Gray
             )
+
             // STATUS PERKAWINAN
             Text(
                 text = stringResource(id = R.string.label_status_perkawinan),
@@ -92,7 +93,7 @@ fun DaftarPeserta(
             Text(
                 text = stringResource(id = R.string.status_perkawinan_contoh),
                 fontSize = 18.sp,
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 10.dp)
             )
 
@@ -103,6 +104,7 @@ fun DaftarPeserta(
                 thickness = 1.dp,
                 color = Color.Gray
             )
+
             // ALAMAT
             Text(
                 text = stringResource(id = R.string.label_alamat),
@@ -113,7 +115,7 @@ fun DaftarPeserta(
             Text(
                 text = stringResource(id = R.string.alamat_contoh),
                 fontSize = 18.sp,
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 20.dp)
             )
 
@@ -139,5 +141,6 @@ fun DaftarPeserta(
             ) {
                 Text(text = stringResource(id = R.string.btn_formulir_pendaftaran))
             }
-
         }
+    }
+}

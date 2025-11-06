@@ -13,4 +13,5 @@
     <string name="alamat_contoh">Yogyakarta</string>
     <string name="btn_beranda">Beranda</string>
     <string name="btn_formulir_pendaftaran">Formulir Pendaftaran</string>
+    <string name="label_kelamin_contoh">Jenis Kelamin</string>
 </resources>
